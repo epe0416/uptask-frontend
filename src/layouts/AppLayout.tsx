@@ -1,14 +1,17 @@
 import { Outlet } from 'react-router-dom'
 import Logo from '@/components/Logo';
+import NavMenu from '@/components/NavMenu';
 
 export default function AppLayout() {
     return (
         <>
-            <header className='bg-gray-800 py-3 shadow-lg'>
-                <div className='max-w-screen-2xl mx-auto flex flex-col lg:flex-row justify-between items-center'>
-                    <div className='w-24'>
+            <header className='bg-gray-800 py-5 shadow-lg'>
+                <div className='max-w-screen-xl mx-auto flex flex-col lg:flex-row justify-between items-center'>
+                    <div className='w-28'>
                         <Logo/>
                     </div>
+
+                    <NavMenu/>
                 </div>
             </header>
 
