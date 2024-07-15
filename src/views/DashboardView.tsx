@@ -1,6 +1,17 @@
 import { Link } from "react-router-dom"
+import { useQuery } from '@tanstack/react-query'
+import { getProjects } from "@/api/ProjectAPI"
 
 export default function DashboardView() {
+    
+    const { data, isLoading } = useQuery({
+        queryKey: ['projects'],
+        queryFn: getProjects
+    })
+    
+    if(isLoading) return 'Cargando...'
+    console.log(data)
+
     return (
         <>
             <h1 className="text-2xl font-black">Mis Proyectos</h1>
