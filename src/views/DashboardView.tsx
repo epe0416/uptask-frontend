@@ -10,9 +10,8 @@ export default function DashboardView() {
     })
     
     if(isLoading) return 'Cargando...'
-    console.log(data)
 
-    return (
+    if(data) return (
         <>
             <h1 className="text-2xl font-black">Mis Proyectos</h1>
             <p className="text-lg font-light text-gray-500 mt-1">Maneja y administra tus proyectos</p>
@@ -25,6 +24,14 @@ export default function DashboardView() {
                     Nuevo Proyecto
                 </Link>
             </nav>
+
+            {data.length ? (
+                <p>Si hay proyectos</p>
+            ) : (
+                <p className="text-center py-10">No hay proyectos aún {''}
+                    <Link to='/projects/create' className="text-fuchsia-500 font-bold">Crear Proyecto</Link>
+                </p>
+            )}
         </>
     )
 }
