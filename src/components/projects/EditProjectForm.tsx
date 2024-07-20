@@ -3,6 +3,8 @@ import ProjectForm from "./ProjectForm";
 import { useForm } from "react-hook-form";
 import { useMutation } from "@tanstack/react-query"
 import { updateProject } from "@/api/ProjectAPI";
+import { toast } from "react-toastify";
+import { useNavigate } from "react-router-dom";
 
 type EditProjectFormProps = {
     data: ProjectFormData,
@@ -10,6 +12,8 @@ type EditProjectFormProps = {
 }
 
 export default function EditProjectForm({data, projectId}: EditProjectFormProps) {
+
+    const navigate = useNavigate()
 
     const{register, handleSubmit, formState: {errors}} = useForm({defaultValues:
         {
@@ -21,11 +25,12 @@ export default function EditProjectForm({data, projectId}: EditProjectFormProps)
 
     const { mutate } = useMutation({
         mutationFn: updateProject,
-        onError: () => {
-
+        onError: (error) => {
+            toast.error(error.message)
         },
-        onSuccess: () => {
-
+        onSuccess: (data) => {
+            toast.success(data)
+            navigate('/')
         }
     })
 
