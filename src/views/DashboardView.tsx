@@ -65,10 +65,10 @@ export default function DashboardView() {
                                     </Link>
                                     </MenuItem>
                                     <MenuItem>
-                                    <Link to={``}
-                                        className='block px-3 py-1 text-sm leading-6 text-gray-900 hover:bg-slate-200'>
-                                        Editar Proyecto
-                                    </Link>
+                                        <Link to={`/projects/${project._id}/edit`}
+                                            className='block px-3 py-1 text-sm leading-6 text-gray-900 hover:bg-slate-200'>
+                                            Editar Proyecto
+                                        </Link>
                                     </MenuItem>
                                     <MenuItem>
                                     <button
