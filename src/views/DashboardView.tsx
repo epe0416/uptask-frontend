@@ -33,7 +33,7 @@ export default function DashboardView() {
                     {data.map((project) => (
                     <li key={project._id} className="flex justify-between gap-x-2 px-5 py-3 hover:bg-gray-200 rounded">
                         <div className="flex min-w-0 gap-x-4">
-                            <div className="min-w-0 flex-auto space-y-2">
+                            <div className="min-w-0 flex-auto space-y-1">
                                 <Link to={``}
                                 className="text-fuchsia-700 cursor-pointer hover:underline text-lg font-bold"
                                 >{project.projectName}</Link>

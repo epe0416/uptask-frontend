@@ -1,12 +1,15 @@
-import { ProjectFormData } from "@/types/index";
+import { Project, ProjectFormData } from "@/types/index";
 import ProjectForm from "./ProjectForm";
 import { useForm } from "react-hook-form";
+import { useMutation } from "@tanstack/react-query"
+import { updateProject } from "@/api/ProjectAPI";
 
 type EditProjectFormProps = {
-    data: ProjectFormData
+    data: ProjectFormData,
+    projectId: Project['_id']
 }
 
-export default function EditProjectForm({data}: EditProjectFormProps) {
+export default function EditProjectForm({data, projectId}: EditProjectFormProps) {
 
     const{register, handleSubmit, formState: {errors}} = useForm({defaultValues:
         {
@@ -16,8 +19,22 @@ export default function EditProjectForm({data}: EditProjectFormProps) {
         }
     })
 
+    const { mutate } = useMutation({
+        mutationFn: updateProject,
+        onError: () => {
+
+        },
+        onSuccess: () => {
+
+        }
+    })
+
     const handleForm = (formData: ProjectFormData) => {
-        console.log(formData)
+        const data = {
+            formData,
+            projectId
+        }
+        mutate(data)
     }
 
     return (
