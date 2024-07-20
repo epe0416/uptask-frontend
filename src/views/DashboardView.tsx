@@ -56,24 +56,24 @@ export default function DashboardView() {
                                 leave="transition ease-in duration-75" leaveFrom="transform opacity-100 scale-100"
                                 leaveTo="transform opacity-0 scale-95">
                                 <MenuItems
-                                    className="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white py-2 shadow-lg ring-1 ring-gray-900/5 focus:outline-none"
+                                    className="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white py-2 shadow-lg ring-1 ring-gray-900/5 focus:outline-none "
                                 >
                                     <MenuItem>
                                     <Link to={``}
-                                        className='block px-3 py-1 text-sm leading-6 text-gray-900'>
+                                        className='block px-3 py-1 text-sm leading-6 text-gray-900 hover:bg-slate-200'>
                                         Ver Proyecto
                                     </Link>
                                     </MenuItem>
                                     <MenuItem>
                                     <Link to={``}
-                                        className='block px-3 py-1 text-sm leading-6 text-gray-900'>
+                                        className='block px-3 py-1 text-sm leading-6 text-gray-900 hover:bg-slate-200'>
                                         Editar Proyecto
                                     </Link>
                                     </MenuItem>
                                     <MenuItem>
                                     <button
                                         type='button'
-                                        className='block px-3 py-1 text-sm leading-6 text-red-500'
+                                        className='block px-3 py-1 text-sm leading-6 text-red-500 hover:bg-slate-200 w-full text-start'
                                         onClick={() => { }}
                                     >
                                         Eliminar Proyecto

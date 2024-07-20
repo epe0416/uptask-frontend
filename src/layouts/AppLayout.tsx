@@ -9,7 +9,7 @@ export default function AppLayout() {
         <>
             <header className='bg-gray-800 py-3 shadow-lg'>
                 <div className='max-w-screen-xl mx-auto flex flex-col lg:flex-row justify-between items-center'>
-                    <div className='w-28'>
+                    <div className='w-28 hover:bg-slate-700 hover:bg-gradient-to-t rounded'>
                         <Logo/>
                     </div>
 
@@ -29,6 +29,7 @@ export default function AppLayout() {
             </footer>
 
             <ToastContainer
+                position="bottom-left"
                 pauseOnHover={false}
                 pauseOnFocusLoss={false}
             />
