@@ -48,9 +48,10 @@ export default function TaskList({tasks}: TaskListProps) {
                 {Object.entries(groupedTasks).map(([status, tasks]) => (
                     <div key={status} className='min-w-[300px] 2xl:min-w-0 2xl:w-1/5'>
 
-                        <h3
-                            className={`capitalize text-lg font-light border border-slate-300 bg-white p-2 border-t-4 ${statusStyle[status]} rounded`}
-                        >{statusTraslation[status]}</h3>
+                        <div className={`border border-slate-300 bg-white p-2 border-t-4 ${statusStyle[status]} rounded flex justify-between capitalize text-lg font-light`}>
+                            <h3>{statusTraslation[status]}</h3>                           
+                            <p>{tasks.length}</p>
+                        </div>
 
                         <ul className='mt-5 space-y-5'>
                             {tasks.length === 0 ? (
