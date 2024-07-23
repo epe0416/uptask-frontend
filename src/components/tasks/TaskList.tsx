@@ -24,6 +24,14 @@ const statusTraslation : {[key: string]: string}={
     complete: 'Completado',
 }
 
+const statusStyle : {[key: string]: string}={
+    pending: 'border-t-slate-500',
+    onHold: 'border-t-red-500',
+    inProgress: 'border-t-blue-500',
+    underReview: 'border-t-amber-500',
+    complete: 'border-t-emerald-500',
+}
+
 export default function TaskList({tasks}: TaskListProps) {
     
     const groupedTasks = tasks.reduce((acc, task) => {
@@ -31,8 +39,6 @@ export default function TaskList({tasks}: TaskListProps) {
         currentGroup = [...currentGroup, task]
         return { ...acc, [task.status]: currentGroup };
     }, initialStatusGroups);
-
-    console.log(groupedTasks)
 
     return (
         <>
@@ -43,7 +49,7 @@ export default function TaskList({tasks}: TaskListProps) {
                     <div key={status} className='min-w-[300px] 2xl:min-w-0 2xl:w-1/5'>
 
                         <h3
-                            className={`capitalize text-lg font-light border border-slate-300 bg-white p-2 border-t-4`}
+                            className={`capitalize text-lg font-light border border-slate-300 bg-white p-2 border-t-4 ${statusStyle[status]} rounded`}
                         >{statusTraslation[status]}</h3>
 
                         <ul className='mt-5 space-y-5'>
