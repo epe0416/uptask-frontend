@@ -12,7 +12,7 @@ export default function TaskCard({task}: TaskCardProps) {
     const navigate = useNavigate()
 
     return (
-        <li className="p-4 bg-white border-slate-300 flex justify-between gap-3 rounded-md shadow-md hover:shadow-lg">
+        <li className="p-4 bg-white border-slate-300 flex justify-between gap-3 rounded-md shadow-md hover:shadow-lg hover:bg-sky-50">
             <div className="min-w-0 flex flex-col gap-y-2">
                 <button
                     type="button"
