@@ -35,7 +35,8 @@ export default function TaskCard({task}: TaskCardProps) {
             <div className="min-w-0 flex flex-col gap-y-2">
                 <button
                     type="button"
-                    className="font-bold text-slate-600 text-left"
+                    className="font-bold text-slate-600 text-left hover:text-slate-800"
+                    onClick={() => navigate(location.pathname + `?viewTask=${task._id}`)} 
                 >
                     {task.name}
                 </button>
