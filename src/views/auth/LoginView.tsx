@@ -1,6 +1,7 @@
 import { useForm } from "react-hook-form";
 import { UserLoginForm } from "@/types/index";
 import ErrorMessage from "@/components/ErrorMessage";
+import { Link } from "react-router-dom";
 
 export default function LoginView() {
 
@@ -19,9 +20,9 @@ export default function LoginView() {
                 className="space-y-2 p-8 bg-white rounded-lg"
                 noValidate
             >
-                <div className="flex flex-col gap-5">
+                <div className="flex flex-col gap-2">
                 <label
-                    className="text-sm uppercase font-bold"
+                    className="text-sm font-bold"
                 >Email</label>
 
                 <input
@@ -42,9 +43,9 @@ export default function LoginView() {
                 )}
                 </div>
 
-                <div className="flex flex-col gap-5">
+                <div className="flex flex-col gap-2">
                 <label
-                    className="text-sm uppercase font-bold"
+                    className="text-sm font-bold"
                 >Password</label>
 
                 <input
@@ -66,6 +67,12 @@ export default function LoginView() {
                 className="bg-fuchsia-600 hover:bg-fuchsia-700 w-full p-3 text-white font-bold cursor-pointer transition-colors rounded-lg"
                 />
             </form>
+            <nav className="mt-5 flex flex-col space-y-2">
+                <Link
+                    to={'/auth/register'}
+                    className="text-cneter text-gray-300 font-normal"
+                >¿No tienes cuenta? <span className="font-bold">Crea Una</span></Link>
+            </nav>
         </>
     )
 }
