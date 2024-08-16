@@ -134,11 +134,15 @@ export default function RegisterView() {
                 className="bg-fuchsia-600 hover:bg-fuchsia-700 w-full p-3 text-white font-bold cursor-pointer transition-colors rounded-lg"
                 />
             </form>
-            <nav className="mt-5 flex flex-col space-y-2">
+            <nav className="mt-5 flex flex-col space-y-2 items-center">
                 <Link
                     to={'/auth/login'}
                     className="text-cneter text-gray-300 font-normal"
                 >¿Ya tienes cuenta? <span className="font-bold">Inicia Sesión</span></Link>
+                <Link
+                    to={'/auth/forgot-password'}
+                    className="text-cneter text-gray-300 font-normal"
+                >¿Olvidaste tu contraseña? <span className="font-bold">Reestablecer</span></Link>
             </nav>
         </>
     )
