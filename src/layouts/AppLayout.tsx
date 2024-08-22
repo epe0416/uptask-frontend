@@ -21,7 +21,9 @@ export default function AppLayout() {
                         <Logo/>
                     </div>
 
-                    <NavMenu/>
+                    <NavMenu
+                        name = {data.name}
+                    />
                 </div>
             </header>
 
