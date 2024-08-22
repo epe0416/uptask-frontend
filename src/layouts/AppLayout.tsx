@@ -13,7 +13,7 @@ export default function AppLayout() {
     if(isError) {
         return <Navigate to={'/auth/login'}/>
     }
-    return (
+    if(data) return (
         <>
             <header className=' sticky top-0 bg-gray-800 py-3 shadow-lg'>
                 <div className='max-w-screen-xl mx-auto flex flex-col lg:flex-row justify-between items-center'>
