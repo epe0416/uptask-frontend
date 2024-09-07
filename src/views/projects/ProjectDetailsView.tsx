@@ -1,4 +1,4 @@
-import { Navigate, useNavigate, useParams } from "react-router-dom"
+import { Link, Navigate, useNavigate, useParams } from "react-router-dom"
 import { useQuery} from "@tanstack/react-query"
 import { getProjectById } from "@/api/ProjectAPI"
 import AddTaskModal from '../../components/tasks/AddTaskModal';
@@ -29,11 +29,17 @@ export default function ProjectDetailsView() {
             <nav className="my-5 flex gap-3">
                 <button
                     type="button"
-                    className="bg-purple-400 hover:bg-purple-500 px-5 py-2 text-white text-lg font-bold cursor-pointer transition-colors rounded"
+                    className="bg-purple-600 hover:bg-purple-700 px-5 py-2 text-white text-lg font-bold cursor-pointer transition-colors rounded"
                     onClick={() => navigate(location.pathname + '?newTask=true')}
                 >
                     Agregar Tarea
                 </button>
+                <Link
+                    to={'team'}
+                    className="bg-fuchsia-600 hover:bg-fuchsia-700 px-5 py-2 text-white text-lg font-bold cursor-pointer transition-colors rounded"
+                >
+                    Colaboradores
+                </Link>
             </nav>
             <TaskList
                 tasks = {data.tasks}
