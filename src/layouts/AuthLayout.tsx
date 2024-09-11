@@ -1,8 +1,17 @@
 import Logo from '@/components/Logo'
-import { Outlet } from 'react-router-dom'
+import { Outlet, Navigate } from 'react-router-dom'
 import { ToastContainer } from 'react-toastify'
+import { useAuth } from '@/hooks/useAuth';
 
 export default function AuthLayout() {
+
+    const {data, isLoading} = useAuth()
+    
+    if(isLoading) return 'Cargando...'
+    if(data) {
+        return <Navigate to={'/'}/>
+    }
+
     return (
         <>
             <div className='bg-gray-800 min-h-screen flex flex-col items-center'>
