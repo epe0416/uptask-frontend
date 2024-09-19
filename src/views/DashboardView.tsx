@@ -49,6 +49,14 @@ export default function DashboardView() {
                     <li key={project._id} className="flex justify-between gap-x-2 px-5 py-3 hover:bg-gray-200 rounded">
                         <div className="flex min-w-0 gap-x-4">
                             <div className="min-w-0 flex-auto space-y-1">
+                                <div className="mb-2">
+                                    { project.manager === user._id
+                                    ?
+                                        <p className="font-bold text-xs bg-indigo-50 text-indigo-500 border-2 border-indigo-500 rounded-lg inline-block py-1 px-5">Manager</p>
+                                    :
+                                        <p className="font-bold text-xs bg-green-50 text-green-500 border-2 border-green-500 rounded-lg inline-block py-1 px-5">Colaborador</p>
+                                    }
+                                </div>
                                 <Link to={`/projects/${project._id}`}
                                 className="text-fuchsia-700 cursor-pointer hover:underline text-lg font-bold"
                                 >{project.projectName}</Link>
