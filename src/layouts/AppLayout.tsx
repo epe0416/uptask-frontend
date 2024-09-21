@@ -20,10 +20,12 @@ export default function AppLayout() {
                     <div className='w-28 hover:bg-slate-700 hover:bg-gradient-to-t rounded'>
                         <Logo/>
                     </div>
-
-                    <NavMenu
-                        name = {data.name}
-                    />
+                    <div className='flex items-center gap-3'>
+                        <p className='text-center font-bold text-white'>{data.name}</p>
+                        <NavMenu
+                            // name = {data.name}
+                        />
+                    </div>
                 </div>
             </header>
 
