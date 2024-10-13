@@ -96,6 +96,14 @@ export default function TaskModalDetails() {
                                         className="font-black text-2xl my-2"
                                     >{data.name}</Dialog.Title>
                                     <p className='text-slate-500 mb-2'>Descripción: {data.description}</p>
+
+                                    {data.completedBy && (
+                                        <p>
+                                            <span className='font-bold text-slate-600'>Estado actualizado por:</span>{' '}
+                                            {data.completedBy.name}
+                                        </p>
+                                    )}
+
                                     <div className='my-5 space-y-3'>
                                         <label className='font-bold'>Estado Actual:</label>
                                         <select
