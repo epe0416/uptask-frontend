@@ -1,9 +1,24 @@
+import { Task } from '@/types/index';
 import AddNoteForm from './AddNoteForm';
+import NoteDetail from './NoteDetail';
 
-export default function NotesPanel() {
+type NotesPanelProps = {
+    notes: Task['notes']
+}
+
+export default function NotesPanel({notes}: NotesPanelProps) {
     return (
         <>
             <AddNoteForm/>
+
+            <div className='divide-y divide-gray-100 mt-5'>
+                {notes.length ? (
+                    <>
+                        <p className='font-bold tx-lg text-slate-600 my-2'>Notas: </p>
+                        {notes.map(note => <NoteDetail/>)}
+                    </>
+                ): <p className="text-gray-500 text-center pt-3">No hay notas</p>}
+            </div>
         </>
     )
 }
