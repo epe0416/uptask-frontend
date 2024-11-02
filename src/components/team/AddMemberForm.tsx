@@ -32,14 +32,14 @@ export default function AddMemberForm() {
         <>
 
             <form
-                className="mt-10 space-y-5"
+                className="mt-5 space-y-5"
                 onSubmit={handleSubmit(handleSearchUser)}
                 noValidate
             >
 
                 <div className="flex flex-col gap-3">
                     <label
-                        className="text-sm uppercase font-bold"
+                        className="text-sm font-bold"
                         htmlFor="name"
                     >E-mail de Usuario</label>
                     <input

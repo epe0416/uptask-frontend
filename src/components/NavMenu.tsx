@@ -22,7 +22,7 @@ export default function NavMenu() {
 return (
     <Popover className="relative">
         <Popover.Button className="inline-flex items-center gap-x-1 text-sm font-semibold leading-6 p-1 rounded-lg bg-purple-400">
-            <Bars3Icon className='w-8 h-8 text-white ' />
+            <Bars3Icon className='w-6 h-6 text-white ' />
         </Popover.Button>
 
         <Transition

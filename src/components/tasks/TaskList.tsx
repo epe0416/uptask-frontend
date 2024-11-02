@@ -36,7 +36,7 @@ export default function TaskList({tasks, canEdit}: TaskListProps) {
 
     return (
         <>
-            <h2 className="text-2xl font-black my-5">Tareas</h2>
+            <h2 className="text-xl font-black my-5">Tareas</h2>
 
             <div className='flex gap-5 overflow-x-scroll 2xl:overflow-auto pb-32'>
                 {Object.entries(groupedTasks).map(([status, tasks]) => (

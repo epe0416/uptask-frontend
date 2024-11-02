@@ -42,11 +42,11 @@ export default function AddMemberModal() {
                                 <Dialog.Panel className="w-full max-w-2xl transform overflow-hidden rounded-xl bg-white text-left align-middle shadow-xl transition-all p-10">
                                     <Dialog.Title
                                         as="h3"
-                                        className="font-black text-2xl my-2"
+                                        className="font-black text-xl my-2"
                                     >
                                         Agregar Integrante al equipo
                                     </Dialog.Title>
-                                    <p className="text-lg font-bold">Busca el nuevo integrante por email {''}
+                                    <p className="font-bold">Busca el nuevo integrante por email {''}
                                         <span className="text-fuchsia-600">para agregarlo al proyecto</span>
                                     </p>
 

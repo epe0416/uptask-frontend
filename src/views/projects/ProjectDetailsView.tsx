@@ -30,27 +30,32 @@ export default function ProjectDetailsView() {
 
     if(data && user) return (
         <>
-            <h1 className="text-2xl font-black">{data.projectName}</h1>
-            <p className="text-lg font-light text-gray-500 mt-1">{data.description}</p>
+            <div className="flex items-center justify-between">
+                <div>
+                    <h1 className="text-xl font-black">{data.projectName}</h1>
+                    <p className="font-light text-gray-500 mt-1">{data.description}</p>
+                    <p className="font-light text-gray-500 mt-1">Cantidad de tareas: <span className="font-bold">{data.tasks.length}</span></p>
+                </div>
+                {isManager(data.manager, user._id) && (
+                    <nav className="my-5 flex gap-3">
+                        <button
+                            type="button"
+                            className="border border-purple-600 px-3 py-2 text-gray-700 text-sm font-bold hover:bg-purple-700 hover:text-white cursor-pointer transition-colors rounded"
+                            onClick={() => navigate(location.pathname + '?newTask=true')}
+                        >
+                            Agregar Tarea
+                        </button>
+                        <Link
+                            to={'team'}
+                            className="border border-fuchsia-600 hover:bg-fuchsia-700 hover:text-white px-3 py-2 text-gray-700 text-sm font-bold cursor-pointer transition-colors rounded"
+                        >
+                            Colaboradores
+                        </Link>
+                    </nav>
+                )}
 
-            {isManager(data.manager, user._id) && (
-                <nav className="my-5 flex gap-3">
-                    <button
-                        type="button"
-                        className="bg-purple-600 hover:bg-purple-700 px-5 py-2 text-white text-lg font-bold cursor-pointer transition-colors rounded"
-                        onClick={() => navigate(location.pathname + '?newTask=true')}
-                    >
-                        Agregar Tarea
-                    </button>
-                    <Link
-                        to={'team'}
-                        className="bg-fuchsia-600 hover:bg-fuchsia-700 px-5 py-2 text-white text-lg font-bold cursor-pointer transition-colors rounded"
-                    >
-                        Colaboradores
-                    </Link>
-                </nav>
-            )}
-            
+            </div>
+
             <TaskList
                 tasks = {data.tasks}
                 canEdit = {canEdit}

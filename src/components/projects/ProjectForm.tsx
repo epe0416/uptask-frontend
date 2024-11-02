@@ -11,8 +11,8 @@ export default function ProjectForm({errors, register}: ProjectFormProps) {
     return (
         <>
             <div className="mb-5 space-y-3">
-                <label htmlFor="projectName" className="text-sm uppercase font-bold">
-                    Nombre del Proyecto
+                <label htmlFor="projectName" className="text-sm font-bold">
+                    Nombre del Proyecto <span className="text-xs text-red-700">(*)</span>
                 </label>
                 <input
                     id="projectName"
@@ -30,8 +30,8 @@ export default function ProjectForm({errors, register}: ProjectFormProps) {
             </div>
 
             <div className="mb-5 space-y-3">
-                <label htmlFor="clientName" className="text-sm uppercase font-bold">
-                    Nombre Cliente
+                <label htmlFor="clientName" className="text-sm font-bold">
+                    Nombre Cliente <span className="text-xs text-red-700">(*)</span>
                 </label>
                 <input
                     id="clientName"
@@ -49,8 +49,8 @@ export default function ProjectForm({errors, register}: ProjectFormProps) {
             </div>
 
             <div className="mb-5 space-y-3">
-                <label htmlFor="description" className="text-sm uppercase font-bold">
-                    Descripción
+                <label htmlFor="description" className="text-sm font-bold">
+                    Descripción <span className="text-xs text-red-700">(*)</span>
                 </label>
                 <textarea
                     id="description"

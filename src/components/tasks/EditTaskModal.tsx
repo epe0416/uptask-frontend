@@ -75,12 +75,12 @@ export default function EditTaskModal({data, taskId}: EditTaskModalProps) {
                             <Dialog.Panel className="w-full max-w-2xl transform overflow-hidden rounded-xl bg-white text-left align-middle shadow-xl transition-all p-10">
                                 <Dialog.Title
                                     as="h3"
-                                    className="font-black text-2xl my-2"
+                                    className="font-black text-xl my-2"
                                 >
                                     Editar Tarea
                                 </Dialog.Title>
 
-                                <p className="text-lg font-bold">Realiza cambios a una tarea en {''}
+                                <p className="font-bold">Realiza cambios a una tarea en {''}
                                     <span className="text-fuchsia-600">este formulario</span>
                                 </p>
 

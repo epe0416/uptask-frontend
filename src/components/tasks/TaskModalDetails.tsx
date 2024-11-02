@@ -94,9 +94,9 @@ export default function TaskModalDetails() {
                                     <p className='text-sm text-slate-400'>Última actualización: {formatDate(data.updatedAt)}</p>
                                     <Dialog.Title
                                         as="h3"
-                                        className="font-black text-2xl my-2"
+                                        className="font-black text-xl my-2"
                                     >{data.name}</Dialog.Title>
-                                    <p className='text-slate-500 mb-2'>Descripción: {data.description}</p>
+                                    <p className='text-slate-500 mb-2 text-sm'>Descripción: {data.description}</p>
 
                                     {data.completedBy.length ? (
                                         <>
