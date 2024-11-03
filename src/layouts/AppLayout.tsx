@@ -33,8 +33,8 @@ export default function AppLayout() {
                 <Outlet/>
             </section>
 
-            <footer className='py-3'>
-                <p className='text-center'>
+            <footer className='py-10'>
+                <p className='text-center text-xs'>
                     Todos los derechos reservados {new Date().getFullYear()}&#174;
                 </p>
 
