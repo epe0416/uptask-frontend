@@ -60,11 +60,13 @@ export default function EditProjectForm({data, projectId}: EditProjectFormProps)
                         register = {register}
                         errors= {errors}
                     />
-                    <input
-                        type="submit"
-                        value="Guardar Cambios"
-                        className="bg-fuchsia-600 hover:bg-fuchsia-700 w-full p-3 text-white font-bold cursor-pointer transition-colors rounded-lg"
-                    />
+                    <div className="flex justify-center">
+                        <input
+                            type="submit"
+                            value="Guardar Cambios"
+                            className="border border-fuchsia-600 hover:bg-fuchsia-700 text-gray-700 p-3 hover:text-white font-bold cursor-pointer transition-colors rounded-lg"
+                        />
+                    </div>
                 </form>
             </div>
         </>

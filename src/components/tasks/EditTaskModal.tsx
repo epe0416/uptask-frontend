@@ -94,12 +94,14 @@ export default function EditTaskModal({data, taskId}: EditTaskModalProps) {
                                         register = { register }
                                         errors = { errors }
                                     />
-                    
-                                    <input
-                                        type="submit"
-                                        className=" bg-fuchsia-600 hover:bg-fuchsia-700 w-full p-3 text-white font-bold cursor-pointer transition-colors rounded-lg"
-                                        value='Guardar Tarea'
-                                    />
+                                    <div className='flex justify-center'>
+                                        <input
+                                            type="submit"
+                                            className="border border-fuchsia-600 hover:bg-fuchsia-700 text-gray-700 p-3 hover:text-white font-bold cursor-pointer transition-colors rounded-lg"
+                                            value='Guardar Tarea'
+                                        />
+                                        
+                                    </div>
                                 </form>
                             </Dialog.Panel>
                         </Transition.Child>

@@ -96,11 +96,14 @@ export default function AddTaskModal() {
                                             register={register}
                                             errors={errors}
                                         />
-                                        <input
-                                            type="submit"
-                                            value="Guardar Tarea"
-                                            className="bg-fuchsia-600 hover:bg-fuchsia-700 w-full p-3 text-white font-bold cursor-pointer transition-colors rounded-lg"
-                                        />
+                                        <div className='flex justify-center mt-5'>
+                                            <input
+                                                type="submit"
+                                                value="Guardar Tarea"
+                                                className="border border-fuchsia-600 hover:bg-fuchsia-700 text-gray-700 p-3 hover:text-white font-bold cursor-pointer transition-colors rounded-lg"
+                                            />
+
+                                        </div>
                                     </form>
 
                                 </Dialog.Panel>
