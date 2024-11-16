@@ -46,7 +46,6 @@ export default function TaskList({tasks, canEdit}: TaskListProps) {
         onSuccess: (data) => {
             toast.success(data)
             queryClient.invalidateQueries({queryKey: ['project', projectId]})
-            // queryClient.invalidateQueries({queryKey: ['task', taskId]})
         }
     })
     
